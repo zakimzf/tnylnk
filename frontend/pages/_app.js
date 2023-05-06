@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
       <Head>
-        <title>RISTEK.link | No config customizable url shortener.</title>
+        <title>tnylnk</title>
         <meta
           name="description"
           content="No config customizable url shortener."

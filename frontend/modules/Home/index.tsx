@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import LeftBanner from "../images/LeftBanner";
-import RightBanner from "../images/RightBanner";
+
 import RistekLogo from "../images/Logo";
-import BottomBanner from "../images/Bottom";
+
 import Input from "../components/Input";
 import Button from "../components/Button";
 import ResultBox from "../components/ResultBox";
@@ -85,16 +84,13 @@ const HomePage = () => {
   };
 
   return (
-    <div className="w-full h-screen max-h-screen overflow-hidden relative ">
-      <LeftBanner className="absolute top-0 left-0 hidden h-screen w-auto lg:block animate-fade-in" />
-      <BottomBanner className="block lg:hidden absolute bottom-0 w-full h-auto animate-fade-in" />
-      <RightBanner className="absolute top-0 right-0 hidden h-screen w-auto lg:block animate-fade-in" />
+    <div className="w-full h-screen max-h-screen overflow-hidden relative bg-black">
+      
       <a
         href="http://ristek.cs.ui.ac.id/"
         target="__blank"
         className=" top-2 absolute left-1/2"
       >
-        <RistekLogo className="animate-fade-in" />
       </a>
       <div
         className="w-full px-5"
@@ -111,13 +107,13 @@ const HomePage = () => {
         }}
       >
         <div className="font-poppins font-bold text-4xl md:text-6xl text-black text-center animate-tracking-in-expand">
-          RISTEK.<span className="text-primary">LINK</span>
+        <RistekLogo className="animate-fade-in" />
         </div>
-        <div className="font-poppins font-medium text-sm md:text-xl mb-5 text-center animate-fade-in-text">
+        <div className="font-poppins text-white font-medium text-sm md:text-xl mb-5 text-center animate-fade-in-text">
           The easiest customizable url shortener, ever.
         </div>
 
-        <div className="w-full max-w-sm flex flex-col items-center relative animate-slide-top">
+        <div className="w-full max-w-sm flex flex-col items-center relative animate-slide-top ">
           <Input
             placeholder="Enter your long url"
             value={url}
@@ -126,9 +122,9 @@ const HomePage = () => {
             errorMessage={isUrlValid ? "" : "Please enter a valid url."}
           />
           <div className="my-5 flex flex-row items-center w-full justify-center">
-            <div className="font-poppins font-medium mr-1">ristek.link/</div>
+            <div className="font-poppins font-medium mr-1 text-white">tny.link/</div>
             <Input
-              placeholder="Enter your short url"
+              placeholder=" Enter your short url"
               onChange={(e) => handleAliasType(e.target.value)}
               value={alias}
             />
@@ -150,25 +146,7 @@ const HomePage = () => {
           )}
         </div>
       </div>
-      <div className="animate-fade-in-text">
-        <a
-          href="https://www.producthunt.com/posts/ristek-link?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ristek-link"
-          target="_blank"
-          style={{
-            position: "absolute",
-            bottom: 10,
-            left: "50%",
-            transform: "translate(-50%, 0)",
-          }}
-        >
-          <img
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295238&theme=light"
-            alt="RISTEK.Link - World's easiest open-source free customisable url shortener | Product Hunt"
-            width="250"
-            height="54"
-          />
-        </a>
-      </div>
+      
     </div>
   );
 };
